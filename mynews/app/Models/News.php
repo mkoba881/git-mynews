@@ -12,7 +12,7 @@ class News extends Model
     protected $guarded = array('id');
 
     // テーブル名を指定
-    protected $table = 'your_table';
+    protected $table = 'news';
 
     public static $rules = array(
         'title' => 'required',
