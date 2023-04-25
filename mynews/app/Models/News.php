@@ -12,10 +12,16 @@ class News extends Model
     protected $guarded = array('id');
 
     // テーブル名を指定
-    protected $table = 'news';
+    //いったん無効化　protected $table = 'news';
 
     public static $rules = array(
         'title' => 'required',
         'body' => 'required',
     );
+    
+        // News Modelに関連付けを行う
+    public function histories()
+    {
+        return $this->hasMany('App\Models\History');
+    }
 }
